@@ -17,6 +17,10 @@ class Patterns {
         case Observer = "Behavioral -> Observer"
         
     }
+    private enum Structural: String {
+        case Decorator = "Structural -> Decorator"
+        
+    }
     
     private func giveBehavioralTestExample(for behavioralPattern: Behavioral) {
         switch behavioralPattern {
@@ -30,6 +34,18 @@ class Patterns {
         print("----------------------")
         
     }
+    private func giveStructuralTestExample(for structuralPattern: Structural) {
+        switch structuralPattern {
+        case .Decorator:
+            print("1.testExampleWithPorsche")
+            Decorator.testExampleWithPorsche()
+            print("")
+            print("2.testExampleWithExtensionDate")
+            Decorator.testExampleWithExtensionDate()
+        }
+        print("----------------------")
+        
+    }
     
     typealias PatternTests = [(patternName: String, test: ()->Void)]
     func generateArrayOfPatternsTests() -> PatternTests {
@@ -37,7 +53,7 @@ class Patterns {
         var newArr = PatternTests()
         newArr.append((Behavioral.Strategy.rawValue, { self.giveBehavioralTestExample(for: .Strategy) }))
         newArr.append((Behavioral.Observer.rawValue, { self.giveBehavioralTestExample(for: .Observer) }))
-        
+        newArr.append((Structural.Decorator.rawValue, { self.giveStructuralTestExample(for: .Decorator) }))
         
         return newArr
     }

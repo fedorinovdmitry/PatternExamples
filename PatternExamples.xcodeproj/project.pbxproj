@@ -16,6 +16,7 @@
 		49B8911D246BB6C1009B1A1B /* Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8911C246BB6C1009B1A1B /* Strategy.swift */; };
 		49D33D87246FB23100F85922 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D33D86246FB23100F85922 /* Observer.swift */; };
 		49D33D89246FB2BF00F85922 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D33D88246FB2BF00F85922 /* Template.swift */; };
+		49D33D8C24726F1D00F85922 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D33D8B24726F1D00F85922 /* Decorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		49B8911C246BB6C1009B1A1B /* Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategy.swift; sourceTree = "<group>"; };
 		49D33D86246FB23100F85922 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		49D33D88246FB2BF00F85922 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		49D33D8B24726F1D00F85922 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		49B89118246BB5B4009B1A1B /* Structural */ = {
 			isa = PBXGroup;
 			children = (
+				49D33D8A24726B2900F85922 /* Decorator */,
 			);
 			path = Structural;
 			sourceTree = "<group>";
@@ -122,6 +125,14 @@
 				49D33D86246FB23100F85922 /* Observer.swift */,
 			);
 			path = Observer;
+			sourceTree = "<group>";
+		};
+		49D33D8A24726B2900F85922 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				49D33D8B24726F1D00F85922 /* Decorator.swift */,
+			);
+			path = Decorator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				49D33D89246FB2BF00F85922 /* Template.swift in Sources */,
 				49B89104246BB533009B1A1B /* AppDelegate.swift in Sources */,
 				49B89106246BB533009B1A1B /* SceneDelegate.swift in Sources */,
+				49D33D8C24726F1D00F85922 /* Decorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
