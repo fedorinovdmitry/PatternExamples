@@ -12,31 +12,47 @@ class Patterns {
     static let sharedInstance = Patterns()
     private init() {}
     
+    private enum Creational: String {
+        case factoryMethod = "Creational -> FactoryMethod"
+    }
+    
     private enum Behavioral: String {
-        case Strategy = "Behavioral -> Strategy"
-        case Observer = "Behavioral -> Observer"
+        case strategy = "Behavioral -> Strategy"
+        case observer = "Behavioral -> Observer"
         
     }
+    
     private enum Structural: String {
-        case Decorator = "Structural -> Decorator"
+        case decorator = "Structural -> Decorator"
         
+    }
+    
+    private func giveCreationalTestExample(for creationallPattern: Creational) {
+        switch creationallPattern {
+        case .factoryMethod:
+            print("testExampleWithCars")
+            FactoryMethod.testExampleWithVehicles()
+            print("----------------------")
+            
+        }
     }
     
     private func giveBehavioralTestExample(for behavioralPattern: Behavioral) {
         switch behavioralPattern {
-        case .Strategy:
+        case .strategy:
             print("testExample1Human")
             Strategy.testExample1Human()
-        case .Observer:
+        case .observer:
             print("testExample1TeacherPupils")
             Observer.testExample1TeacherPupils()
         }
         print("----------------------")
         
     }
+    
     private func giveStructuralTestExample(for structuralPattern: Structural) {
         switch structuralPattern {
-        case .Decorator:
+        case .decorator:
             print("1.testExampleWithPorsche")
             Decorator.testExampleWithPorsche()
             print("")
@@ -51,9 +67,14 @@ class Patterns {
     func generateArrayOfPatternsTests() -> PatternTests {
 
         var newArr = PatternTests()
-        newArr.append((Behavioral.Strategy.rawValue, { self.giveBehavioralTestExample(for: .Strategy) }))
-        newArr.append((Behavioral.Observer.rawValue, { self.giveBehavioralTestExample(for: .Observer) }))
-        newArr.append((Structural.Decorator.rawValue, { self.giveStructuralTestExample(for: .Decorator) }))
+        newArr.append((Behavioral.strategy.rawValue,
+                       { self.giveBehavioralTestExample(for: .strategy) }))
+        newArr.append((Behavioral.observer.rawValue,
+                       { self.giveBehavioralTestExample(for: .observer) }))
+        newArr.append((Structural.decorator.rawValue,
+                       { self.giveStructuralTestExample(for: .decorator) }))
+        newArr.append((Creational.factoryMethod.rawValue,
+                       { self.giveCreationalTestExample(for: .factoryMethod)}))
         
         return newArr
     }
