@@ -14,6 +14,7 @@ class Patterns {
     
     private enum Creational: String {
         case factoryMethod = "Creational -> FactoryMethod"
+        case abstractFactory = "Creational -> AbstractFactory"
     }
     
     private enum Behavioral: String {
@@ -32,9 +33,11 @@ class Patterns {
         case .factoryMethod:
             print("testExampleWithCars")
             FactoryMethod.testExampleWithVehicles()
-            print("----------------------")
-            
+        case .abstractFactory:
+            print("testExampleOfCarsAndBus")
+            AbstractFactory.testExampleOfCarsAndBus()
         }
+        print("----------------------")
     }
     
     private func giveBehavioralTestExample(for behavioralPattern: Behavioral) {
@@ -75,6 +78,8 @@ class Patterns {
                        { self.giveStructuralTestExample(for: .decorator) }))
         newArr.append((Creational.factoryMethod.rawValue,
                        { self.giveCreationalTestExample(for: .factoryMethod)}))
+       newArr.append((Creational.abstractFactory.rawValue,
+                      { self.giveCreationalTestExample(for: .abstractFactory)}))
         
         return newArr
     }
