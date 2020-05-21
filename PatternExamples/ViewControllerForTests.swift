@@ -15,6 +15,7 @@ class Patterns {
     private enum Creational: String {
         case factoryMethod = "Creational -> FactoryMethod"
         case abstractFactory = "Creational -> AbstractFactory"
+        case singleTon = "Creational -> SingleTon"
     }
     
     private enum Behavioral: String {
@@ -36,6 +37,9 @@ class Patterns {
         case .abstractFactory:
             print("testExampleOfCarsAndBus")
             AbstractFactory.testExampleOfCarsAndBus()
+        case .singleTon:
+            print("testExampleSafe")
+            Singleton.testExampleSafe()
         }
         print("----------------------")
     }
@@ -68,7 +72,7 @@ class Patterns {
     
     typealias PatternTests = [(patternName: String, test: ()->Void)]
     func generateArrayOfPatternsTests() -> PatternTests {
-
+        
         var newArr = PatternTests()
         newArr.append((Behavioral.strategy.rawValue,
                        { self.giveBehavioralTestExample(for: .strategy) }))
@@ -78,8 +82,10 @@ class Patterns {
                        { self.giveStructuralTestExample(for: .decorator) }))
         newArr.append((Creational.factoryMethod.rawValue,
                        { self.giveCreationalTestExample(for: .factoryMethod)}))
-       newArr.append((Creational.abstractFactory.rawValue,
-                      { self.giveCreationalTestExample(for: .abstractFactory)}))
+        newArr.append((Creational.abstractFactory.rawValue,
+                       { self.giveCreationalTestExample(for: .abstractFactory)}))
+        newArr.append((Creational.singleTon.rawValue,
+                       { self.giveCreationalTestExample(for: .singleTon)}))
         
         return newArr
     }
@@ -136,7 +142,7 @@ extension ViewControllerForTests: UITableViewDelegate, UITableViewDataSource {
         
         let allertController = UIAlertController(title: "Look at Console",
                                                  message: "testing: \(array[indexPath.row].patternName)",
-                                                 preferredStyle: .alert)
+            preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
         allertController.addAction(ok)
         
