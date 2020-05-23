@@ -18,17 +18,18 @@ class Patterns {
         case singleTon = "Creational -> SingleTon"
     }
     
-    private enum Behavioral: String {
-        case strategy = "Behavioral -> Strategy"
-        case observer = "Behavioral -> Observer"
-        
-    }
-    
     private enum Structural: String {
         case decorator = "Structural -> Decorator"
         
     }
     
+    private enum Behavioral: String {
+        case strategy = "Behavioral -> Strategy"
+        case observer = "Behavioral -> Observer"
+        case command = "Behavioral -> Command"
+    }
+    
+
     private func giveCreationalTestExample(for creationallPattern: Creational) {
         switch creationallPattern {
         case .factoryMethod:
@@ -44,19 +45,6 @@ class Patterns {
         print("----------------------")
     }
     
-    private func giveBehavioralTestExample(for behavioralPattern: Behavioral) {
-        switch behavioralPattern {
-        case .strategy:
-            print("testExample1Human")
-            Strategy.testExample1Human()
-        case .observer:
-            print("testExample1TeacherPupils")
-            Observer.testExample1TeacherPupils()
-        }
-        print("----------------------")
-        
-    }
-    
     private func giveStructuralTestExample(for structuralPattern: Structural) {
         switch structuralPattern {
         case .decorator:
@@ -69,6 +57,24 @@ class Patterns {
         print("----------------------")
         
     }
+    
+    private func giveBehavioralTestExample(for behavioralPattern: Behavioral) {
+        switch behavioralPattern {
+        case .strategy:
+            print("testExample1Human")
+            Strategy.testExample1Human()
+        case .observer:
+            print("testExample1TeacherPupils")
+            Observer.testExample1TeacherPupils()
+        case .command:
+            print("testExampleWithBankOperations")
+            Commands.testExampleWithBankOPeration()
+        }
+        print("----------------------")
+        
+    }
+    
+    
     
     typealias PatternTests = [(patternName: String, test: ()->Void)]
     func generateArrayOfPatternsTests() -> PatternTests {
@@ -86,6 +92,8 @@ class Patterns {
                        { self.giveCreationalTestExample(for: .abstractFactory)}))
         newArr.append((Creational.singleTon.rawValue,
                        { self.giveCreationalTestExample(for: .singleTon)}))
+        newArr.append((Behavioral.command.rawValue,
+                       { self.giveBehavioralTestExample(for: .command)}))
         
         return newArr
     }
