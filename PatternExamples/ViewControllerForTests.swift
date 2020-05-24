@@ -20,6 +20,7 @@ class Patterns {
     
     private enum Structural: String {
         case decorator = "Structural -> Decorator"
+        case adapter = "Structural -> Adapter"
         
     }
     
@@ -53,6 +54,9 @@ class Patterns {
             print("")
             print("2.testExampleWithExtensionDate")
             Decorator.testExampleWithExtensionDate()
+        case .adapter:
+            print("testExampleWithPredator")
+            Adapter.testExampleWithPredator()
         }
         print("----------------------")
         
@@ -80,20 +84,32 @@ class Patterns {
     func generateArrayOfPatternsTests() -> PatternTests {
         
         var newArr = PatternTests()
-        newArr.append((Behavioral.strategy.rawValue,
-                       { self.giveBehavioralTestExample(for: .strategy) }))
-        newArr.append((Behavioral.observer.rawValue,
-                       { self.giveBehavioralTestExample(for: .observer) }))
-        newArr.append((Structural.decorator.rawValue,
-                       { self.giveStructuralTestExample(for: .decorator) }))
+        
+        newArr.append(("Creational", { }))
         newArr.append((Creational.factoryMethod.rawValue,
                        { self.giveCreationalTestExample(for: .factoryMethod)}))
         newArr.append((Creational.abstractFactory.rawValue,
                        { self.giveCreationalTestExample(for: .abstractFactory)}))
         newArr.append((Creational.singleTon.rawValue,
                        { self.giveCreationalTestExample(for: .singleTon)}))
+        
+        
+        newArr.append(("Structural", { }))
+        newArr.append((Structural.adapter.rawValue,
+                       { self.giveStructuralTestExample(for: .adapter) }))
+        newArr.append((Structural.decorator.rawValue,
+                       { self.giveStructuralTestExample(for: .decorator) }))
+        
+        
+        newArr.append(("Behavioral", { }))
         newArr.append((Behavioral.command.rawValue,
                        { self.giveBehavioralTestExample(for: .command)}))
+        newArr.append((Behavioral.observer.rawValue,
+                       { self.giveBehavioralTestExample(for: .observer) }))
+        newArr.append((Behavioral.strategy.rawValue,
+                       { self.giveBehavioralTestExample(for: .strategy) }))
+        
+        
         
         return newArr
     }
