@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4925E914247B747E00BF9838 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925E913247B747E00BF9838 /* Facade.swift */; };
 		492E4CFB24764547001670A3 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E4CFA24764547001670A3 /* Singleton.swift */; };
 		493F7C1224791806008E7C09 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493F7C1124791806008E7C09 /* Command.swift */; };
 		493F7C15247A3363008E7C09 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493F7C14247A3363008E7C09 /* Adapter.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4925E913247B747E00BF9838 /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
 		492E4CFA24764547001670A3 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		493F7C1124791806008E7C09 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		493F7C14247A3363008E7C09 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4925E912247B746700BF9838 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				4925E913247B747E00BF9838 /* Facade.swift */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
 		492E4CF924764238001670A3 /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 			children = (
 				493F7C13247A333B008E7C09 /* Adapter */,
 				49D33D8A24726B2900F85922 /* Decorator */,
+				4925E912247B746700BF9838 /* Facade */,
 			);
 			path = Structural;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 				49B89104246BB533009B1A1B /* AppDelegate.swift in Sources */,
 				49B89106246BB533009B1A1B /* SceneDelegate.swift in Sources */,
 				493F7C1224791806008E7C09 /* Command.swift in Sources */,
+				4925E914247B747E00BF9838 /* Facade.swift in Sources */,
 				49D33D8C24726F1D00F85922 /* Decorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

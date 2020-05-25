@@ -21,6 +21,7 @@ class Patterns {
     private enum Structural: String {
         case decorator = "Structural -> Decorator"
         case adapter = "Structural -> Adapter"
+        case facade = "Structural -> Facade"
         
     }
     
@@ -57,6 +58,9 @@ class Patterns {
         case .adapter:
             print("testExampleWithPredator")
             Adapter.testExampleWithPredator()
+        case .facade:
+            print("testExample")
+            Facade.testExample()
         }
         print("----------------------")
         
@@ -99,6 +103,8 @@ class Patterns {
                        { self.giveStructuralTestExample(for: .adapter) }))
         newArr.append((Structural.decorator.rawValue,
                        { self.giveStructuralTestExample(for: .decorator) }))
+        newArr.append((Structural.facade.rawValue,
+                       { self.giveStructuralTestExample(for: .facade) }))
         
         
         newArr.append(("Behavioral", { }))
