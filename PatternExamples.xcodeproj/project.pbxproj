@@ -14,6 +14,7 @@
 		498527E6247CE2A9003D9B39 /* TemplateMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498527E5247CE2A9003D9B39 /* TemplateMethod.swift */; };
 		498527E9247CE44F003D9B39 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498527E8247CE44F003D9B39 /* Patterns.swift */; };
 		498CDF14246BE09000BF9CFA /* ViewControllerForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CDF13246BE09000BF9CFA /* ViewControllerForTests.swift */; };
+		49A8B9B9247E34BC00F6E642 /* iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B9B8247E34BC00F6E642 /* iterator.swift */; };
 		49B89104246BB533009B1A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B89103246BB533009B1A1B /* AppDelegate.swift */; };
 		49B89106246BB533009B1A1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B89105246BB533009B1A1B /* SceneDelegate.swift */; };
 		49B8910B246BB533009B1A1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B89109246BB533009B1A1B /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		498527E5247CE2A9003D9B39 /* TemplateMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMethod.swift; sourceTree = "<group>"; };
 		498527E8247CE44F003D9B39 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
 		498CDF13246BE09000BF9CFA /* ViewControllerForTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerForTests.swift; sourceTree = "<group>"; };
+		49A8B9B8247E34BC00F6E642 /* iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iterator.swift; sourceTree = "<group>"; };
 		49B89100246BB533009B1A1B /* PatternExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B89103246BB533009B1A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B89105246BB533009B1A1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		49A8B9B7247E34A700F6E642 /* Iterator */ = {
+			isa = PBXGroup;
+			children = (
+				49A8B9B8247E34BC00F6E642 /* iterator.swift */,
+			);
+			path = Iterator;
+			sourceTree = "<group>";
+		};
 		49B890F7246BB533009B1A1B = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				493F7C10247917DB008E7C09 /* Command */,
+				49A8B9B7247E34A700F6E642 /* Iterator */,
 				49D33D85246FB20200F85922 /* Observer */,
 				49B8911B246BB6A1009B1A1B /* Strategy */,
 				498527E4247CE290003D9B39 /* TemplateMethod */,
@@ -297,6 +308,7 @@
 				49B8B55B2474FFA50065860F /* AbstractFactory.swift in Sources */,
 				493F7C15247A3363008E7C09 /* Adapter.swift in Sources */,
 				49D33D8F2473918700F85922 /* FactoryMethod.swift in Sources */,
+				49A8B9B9247E34BC00F6E642 /* iterator.swift in Sources */,
 				498CDF14246BE09000BF9CFA /* ViewControllerForTests.swift in Sources */,
 				492E4CFB24764547001670A3 /* Singleton.swift in Sources */,
 				49D33D87246FB23100F85922 /* Observer.swift in Sources */,

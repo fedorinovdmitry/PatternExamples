@@ -18,13 +18,6 @@ class ViewControllerForTests: UIViewController {
         tView.backgroundColor = UIColor.white
         
         tView.contentInset.top = 20
-        let contentSize = tView.contentSize
-        let footer = UIView(frame: CGRect(x: tView.frame.origin.x,
-                                          y: tView.frame.origin.y + contentSize.height,
-                                          width: tView.frame.size.width,
-                                          height: tView.frame.height - tView.contentSize.height))
-        
-        tView.tableFooterView = footer
         
         tView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tView
