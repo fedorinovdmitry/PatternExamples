@@ -19,6 +19,7 @@ class Patterns {
     }
     
     private enum Structural: String {
+        case composite = "Structural -> Composite"
         case adapter = "Structural -> Adapter"
         case decorator = "Structural -> Decorator"
         case facade = "Structural -> Facade"
@@ -50,6 +51,9 @@ class Patterns {
     
     private func giveStructuralTestExample(for structuralPattern: Structural) {
         switch structuralPattern {
+        case .composite:
+            print("testExampleWithFiles")
+            Composite.testExampleWithFiles()
         case .adapter:
             print("testExampleWithPredator")
             Adapter.testExampleWithPredator()
@@ -106,6 +110,8 @@ class Patterns {
         
         
         newArr.append(("Structural", { }))
+        newArr.append((Structural.composite.rawValue,
+                       { self.giveStructuralTestExample(for: .composite) }))
         newArr.append((Structural.adapter.rawValue,
                        { self.giveStructuralTestExample(for: .adapter) }))
         newArr.append((Structural.decorator.rawValue,
