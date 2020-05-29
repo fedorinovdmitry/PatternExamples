@@ -29,6 +29,7 @@ class Patterns {
         case command = "Behavioral -> Command"
         case iterator = "Behavioral -> Iterator"
         case observer = "Behavioral -> Observer"
+        case state = "Behavioral -> State"
         case strategy = "Behavioral -> Strategy"
         case templateMethod = "Behavioral -> TemplateMethod"
     }
@@ -82,6 +83,9 @@ class Patterns {
         case .observer:
             print("testExample1TeacherPupils")
             Observer.testExample1TeacherPupils()
+        case .state:
+            print("testExampleWithPrinter")
+            State.testExampleWithPrinter()
         case .strategy:
             print("testExample1Human")
             Strategy.testExample1Human()
@@ -127,6 +131,8 @@ class Patterns {
                        { self.giveBehavioralTestExample(for: .iterator) }))
         newArr.append((Behavioral.observer.rawValue,
                        { self.giveBehavioralTestExample(for: .observer) }))
+        newArr.append((Behavioral.state.rawValue,
+                       { self.giveBehavioralTestExample(for: .state) }))
         newArr.append((Behavioral.strategy.rawValue,
                        { self.giveBehavioralTestExample(for: .strategy) }))
         newArr.append((Behavioral.templateMethod.rawValue,

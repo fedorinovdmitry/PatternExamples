@@ -87,21 +87,23 @@ fileprivate protocol File {
     var description: String { get }
     func open()
 }
+
 extension File {
     func open() {
         print("opening \(description)")
     }
 }
+
 extension File where Self: PDFFile {
     var description: String {
         return "ebook \(name) by \(author) with \(pageCount) pages"
     }
 }
+
 extension File where Self: Folder {
     var description: String {
         return "folder \(name) with files: \(files.compactMap { $0.description }.joined(separator: ","))"
     }
-    
     func open() {
         print("opening \(description)")
         print("then opening files: ")
@@ -120,6 +122,7 @@ extension File where Self: MKVFile {
 }
 
 // MARK: classes
+
 fileprivate class Folder: File {
     let name: String
     
