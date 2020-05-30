@@ -13,6 +13,7 @@
 		493F7C15247A3363008E7C09 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493F7C14247A3363008E7C09 /* Adapter.swift */; };
 		4965658D247F85B100320D43 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965658C247F85B100320D43 /* Composite.swift */; };
 		496565922480DE6100320D43 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496565912480DE6100320D43 /* State.swift */; };
+		496565972482262700320D43 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496565962482262700320D43 /* Proxy.swift */; };
 		498527E6247CE2A9003D9B39 /* TemplateMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498527E5247CE2A9003D9B39 /* TemplateMethod.swift */; };
 		498527E9247CE44F003D9B39 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498527E8247CE44F003D9B39 /* Patterns.swift */; };
 		498CDF14246BE09000BF9CFA /* ViewControllerForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CDF13246BE09000BF9CFA /* ViewControllerForTests.swift */; };
@@ -37,6 +38,7 @@
 		493F7C14247A3363008E7C09 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		4965658C247F85B100320D43 /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		496565912480DE6100320D43 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		496565962482262700320D43 /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
 		498527E5247CE2A9003D9B39 /* TemplateMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMethod.swift; sourceTree = "<group>"; };
 		498527E8247CE44F003D9B39 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
 		498CDF13246BE09000BF9CFA /* ViewControllerForTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerForTests.swift; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 				496565912480DE6100320D43 /* State.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		496565952482260900320D43 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				496565962482262700320D43 /* Proxy.swift */,
+			);
+			path = Proxy;
 			sourceTree = "<group>";
 		};
 		498527E4247CE290003D9B39 /* TemplateMethod */ = {
@@ -192,6 +202,7 @@
 				493F7C13247A333B008E7C09 /* Adapter */,
 				49D33D8A24726B2900F85922 /* Decorator */,
 				4925E912247B746700BF9838 /* Facade */,
+				496565952482260900320D43 /* Proxy */,
 			);
 			path = Structural;
 			sourceTree = "<group>";
@@ -331,6 +342,7 @@
 				493F7C15247A3363008E7C09 /* Adapter.swift in Sources */,
 				49D33D8F2473918700F85922 /* FactoryMethod.swift in Sources */,
 				49A8B9B9247E34BC00F6E642 /* iterator.swift in Sources */,
+				496565972482262700320D43 /* Proxy.swift in Sources */,
 				498CDF14246BE09000BF9CFA /* ViewControllerForTests.swift in Sources */,
 				496565922480DE6100320D43 /* State.swift in Sources */,
 				492E4CFB24764547001670A3 /* Singleton.swift in Sources */,
