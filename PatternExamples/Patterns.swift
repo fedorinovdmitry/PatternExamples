@@ -15,6 +15,7 @@ class Patterns {
     private enum Creational: String {
         case factoryMethod = "Creational -> FactoryMethod"
         case abstractFactory = "Creational -> AbstractFactory"
+        case builder = "Creational -> Builder"
         case singleTon = "Creational -> SingleTon"
     }
     
@@ -44,6 +45,9 @@ class Patterns {
         case .abstractFactory:
             print("testExampleOfCarsAndBus")
             AbstractFactory.testExampleOfCarsAndBus()
+        case .builder:
+            print("testExampleWithBurgers")
+            Builder.testExampleWithBurgers()
         case .singleTon:
             print("testExampleSafe")
             Singleton.testExampleSafe()
@@ -113,6 +117,8 @@ class Patterns {
                        { self.giveCreationalTestExample(for: .factoryMethod)}))
         newArr.append((Creational.abstractFactory.rawValue,
                        { self.giveCreationalTestExample(for: .abstractFactory)}))
+        newArr.append((Creational.builder.rawValue,
+                       { self.giveCreationalTestExample(for: .builder)}))
         newArr.append((Creational.singleTon.rawValue,
                        { self.giveCreationalTestExample(for: .singleTon)}))
         
