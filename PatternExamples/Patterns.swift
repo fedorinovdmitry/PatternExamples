@@ -28,6 +28,7 @@ class Patterns {
     }
     
     private enum Behavioral: String {
+        case chainOfResponsibility = "Behavioral -> ChainOfResponsibility"
         case command = "Behavioral -> Command"
         case iterator = "Behavioral -> Iterator"
         case observer = "Behavioral -> Observer"
@@ -82,6 +83,9 @@ class Patterns {
     
     private func giveBehavioralTestExample(for behavioralPattern: Behavioral) {
         switch behavioralPattern {
+        case .chainOfResponsibility:
+            print("testExampleWithErrors")
+            ChainOfResponsibility.testExampleWithErrors()
         case .command:
             print("testExampleWithBankOperations")
             Commands.testExampleWithBankOPeration()
@@ -100,7 +104,6 @@ class Patterns {
         case .templateMethod:
             print("testExampleDriveTransport")
             TemplateMethod.testExampleDriveTransport()
-            
         }
         print("----------------------")
         
@@ -137,6 +140,8 @@ class Patterns {
         
         
         newArr.append(("Behavioral", { }))
+        newArr.append((Behavioral.chainOfResponsibility.rawValue,
+                       { self.giveBehavioralTestExample(for: .chainOfResponsibility)}))
         newArr.append((Behavioral.command.rawValue,
                        { self.giveBehavioralTestExample(for: .command)}))
         newArr.append((Behavioral.iterator.rawValue,
