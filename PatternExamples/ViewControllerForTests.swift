@@ -23,7 +23,7 @@ class ViewControllerForTests: UIViewController {
         return tView
     }
     
-    var array = Patterns.sharedInstance.generateArrayOfPatternsTests()
+    var array = Patterns.shared.generateArrayOfPatternsTests()
     
     override func viewDidLoad() {
         super.viewDidLoad()
