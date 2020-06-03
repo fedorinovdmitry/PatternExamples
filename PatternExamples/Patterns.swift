@@ -55,6 +55,7 @@ class Patterns {
     private enum Structural: String, PatternType, CaseIterable {
         
         case composite = "Structural -> Composite"
+        case bridge = "Structural -> Bridge"
         case adapter = "Structural -> Adapter"
         case decorator = "Structural -> Decorator"
         case facade = "Structural -> Facade"
@@ -68,6 +69,9 @@ class Patterns {
             case .composite:
                 print("testExampleWithFiles")
                 Composite.testExampleWithFiles()
+            case .bridge:
+                print("testExample")
+                Bridge.testExample()
             case .adapter:
                 print("testExampleWithPredator")
                 Adapter.testExampleWithPredator()
