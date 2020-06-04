@@ -59,6 +59,7 @@ class Patterns {
         case adapter = "Structural -> Adapter"
         case decorator = "Structural -> Decorator"
         case facade = "Structural -> Facade"
+        case flyweight = "Structural -> Flyweight"
         case proxy = "Strucutral -> Proxy"
         
         var name: String { get { return self.rawValue } }
@@ -84,6 +85,9 @@ class Patterns {
             case .facade:
                 print("testExample")
                 Facade.testExample()
+            case .flyweight:
+                print("testExampleWithTrees")
+                Flyweight.testExampleWithTrees()
             case .proxy:
                 print("testExampleWithAutheficatedSrver")
                 Proxy.testExampleWithAutheficatedSrver()
