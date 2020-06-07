@@ -34,6 +34,7 @@
 		49D33D8C24726F1D00F85922 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D33D8B24726F1D00F85922 /* Decorator.swift */; };
 		49D33D8F2473918700F85922 /* FactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D33D8E2473918700F85922 /* FactoryMethod.swift */; };
 		49F429D52488D41000B2106A /* Flyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F429D42488D41000B2106A /* Flyweight.swift */; };
+		49FC4FFE248CDE3700438BED /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FC4FFD248CDE3700438BED /* Mediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		49D33D8B24726F1D00F85922 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		49D33D8E2473918700F85922 /* FactoryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryMethod.swift; sourceTree = "<group>"; };
 		49F429D42488D41000B2106A /* Flyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flyweight.swift; sourceTree = "<group>"; };
+		49FC4FFD248CDE3700438BED /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 				4938E9772484C4810052C044 /* ChainOfResponsibility */,
 				493F7C10247917DB008E7C09 /* Command */,
 				49A8B9B7247E34A700F6E642 /* Iterator */,
+				49FC4FFB248CDDFB00438BED /* Mediator */,
 				49D33D85246FB20200F85922 /* Observer */,
 				496565902480DE4A00320D43 /* State */,
 				49B8911B246BB6A1009B1A1B /* Strategy */,
@@ -320,6 +323,14 @@
 				49F429D42488D41000B2106A /* Flyweight.swift */,
 			);
 			path = Flyweight;
+			sourceTree = "<group>";
+		};
+		49FC4FFB248CDDFB00438BED /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				49FC4FFD248CDE3700438BED /* Mediator.swift */,
+			);
+			path = Mediator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +408,7 @@
 				493F7C15247A3363008E7C09 /* Adapter.swift in Sources */,
 				49D33D8F2473918700F85922 /* FactoryMethod.swift in Sources */,
 				49A8B9B9247E34BC00F6E642 /* iterator.swift in Sources */,
+				49FC4FFE248CDE3700438BED /* Mediator.swift in Sources */,
 				496565972482262700320D43 /* Proxy.swift in Sources */,
 				498CDF14246BE09000BF9CFA /* ViewControllerForTests.swift in Sources */,
 				496565922480DE6100320D43 /* State.swift in Sources */,

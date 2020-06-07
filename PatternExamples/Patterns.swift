@@ -101,6 +101,7 @@ class Patterns {
         case chainOfResponsibility = "Behavioral -> ChainOfResponsibility"
         case command = "Behavioral -> Command"
         case iterator = "Behavioral -> Iterator"
+        case mediator = "Behavioral -> Mediator"
         case observer = "Behavioral -> Observer"
         case state = "Behavioral -> State"
         case strategy = "Behavioral -> Strategy"
@@ -120,6 +121,9 @@ class Patterns {
             case .iterator:
                 print("testExampleCarHistory")
                 Iterator.testExampleCarHistory()
+            case .mediator:
+                print("testExampleWithSensors")
+                Mediator.testExampleWithSensors()
             case .observer:
                 print("testExample1TeacherPupils")
                 Observer.testExample1TeacherPupils()
